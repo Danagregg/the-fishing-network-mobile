@@ -13,14 +13,15 @@ import React, {
   View
 } from 'react-native';
 
+import EventSegmentedControlExample from '../TheFishingNetwork/SegmentControl';
+
 class TheFishingNetwork extends Component {
 
   render() {
     return (
       <View>
         <View style = {{marginBottom: 10}}>
-          <Text> Basic </Text>
-          <SegmentedControlIOS values = {['One', 'Two', 'Three']} />
+          <EventSegmentedControlExample />
         </View>
       </View>
     );
@@ -33,6 +34,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
+  },
+  text: {
+    fontSize:14,
+    textAlign: 'center',
+    fontWeight: '500',
+    margin: 10,
   },
   welcome: {
     fontSize: 20,
