@@ -7,16 +7,21 @@ import React, {
   View
 } from 'react-native';
 
+import OperationView from '../TheFishingNetwork/OperationView';
 
-export var EventSegmentedControlExample = React.createClass({
+export var SegmentControl = React.createClass({
   getInitialState() {
     return {
       values: ['Operation', 'Catch', 'Species'],
-      value: 'Not Selected',
-      selectedIndex: undefined
+      value: 'Operation',
+      selectedIndex: 0
     };
   },
   render() {
+    databaseView = null
+    if (this.state.selectedIndex == 0) {
+      databaseView = <OperationView />
+    }
     return (
       <View style={styles.segment}>
       <Text>Event</Text>
@@ -31,10 +36,12 @@ export var EventSegmentedControlExample = React.createClass({
         <Text style = {styles.text} >
           Index: {this.state.selectedIndex}
         </Text>
+        {databaseView}
       </View>
     );
   },
   _onChange(event) {
+
     this.setState({
       selectedIndex: event.nativeEvent.selectedSegmentIndex,
     });
@@ -74,4 +81,5 @@ const styles = StyleSheet.create({
   },
 });
 
-module.exports = EventSegmentedControlExample;
+
+module.exports = SegmentControl;

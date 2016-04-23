@@ -13,7 +13,9 @@ import React, {
   View
 } from 'react-native';
 
-import EventSegmentedControlExample from '../TheFishingNetwork/SegmentControl';
+import PropTypes from 'react';
+
+import SegmentControl from '../TheFishingNetwork/SegmentControl';
 
 class TheFishingNetwork extends Component {
 
@@ -26,7 +28,7 @@ class TheFishingNetwork extends Component {
           <Text style={styles.toolbarButton}>Export</Text>
         </View>
         <View style = {{marginBottom: 10}}>
-          <EventSegmentedControlExample />
+          <SegmentControl />
         </View>
       </View>
     );
