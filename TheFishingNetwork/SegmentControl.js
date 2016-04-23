@@ -11,14 +11,14 @@ import React, {
 export var EventSegmentedControlExample = React.createClass({
   getInitialState() {
     return {
-      values: ['One', 'Two', ' Three'],
+      values: ['Operation', 'Catch', 'Species'],
       value: 'Not Selected',
       selectedIndex: undefined
     };
   },
   render() {
     return (
-      <View>
+      <View style={styles.segment}>
       <Text>Event</Text>
       <SegmentedControlIOS
         values={this.state.values}
@@ -58,6 +58,9 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontWeight: '500',
     margin: 10,
+  },
+  segment: {
+    marginHorizontal: 10
   },
   welcome: {
     fontSize: 20,
