@@ -6,6 +6,7 @@
 
 import React, {
   AppRegistry,
+  SegmentedControlIOS,
   Component,
   StyleSheet,
   Text,
@@ -13,19 +14,14 @@ import React, {
 } from 'react-native';
 
 class TheFishingNetwork extends Component {
+
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
+      <View>
+        <View style = {{marginBottom: 10}}>
+          <Text> Basic </Text>
+          <SegmentedControlIOS values = {['One', 'Two', 'Three']} />
+        </View>
       </View>
     );
   }
