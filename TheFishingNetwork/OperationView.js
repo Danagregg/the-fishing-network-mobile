@@ -4,11 +4,11 @@ import React, {
   AppRegistry,
   Component,
   StyleSheet,
+  ScrollView,
   TextInput,
   Text,
   View
 } from 'react-native';
-
 
 // <TextInput
 //     style={{height: 40, borderColor: 'gray', borderWidth: 1}}
@@ -20,10 +20,14 @@ export var OperationView = React.createClass ({
 
   getInitialState(){
     return {
-      fisherName:'Hello',
-      fisherAddress: 'Address',
-      fisherPhone:'905-640',
-      fisherEmail:'hello@gmail.com'
+      dealerId:'987654',
+      dealerName: 'Bobby Jones',
+      dealerAddress:'90 Avison Way',
+      tripLocations: "Orlando, Vanocuver",
+      vesselName: "Black Pearl",
+      vesselOwner: "Jones Bobby",
+      vesselId: "123456",
+
     };
   },
 
@@ -31,46 +35,79 @@ export var OperationView = React.createClass ({
   render() {
     return (
       <View>
+        <ScrollView
+          style={styles.scrollView}>
         <View style={styles.textInputs}>
           <Text style={styles.textLabel}>
-              Fisherman Name
+              Dealer ID
           </Text>
           <TextInput
             style={styles.textBox}
-            onChangeText={(fisherName) => this.setState({fisherName})}
-            value={this.state.fisherName}
+            onChangeText={(dealerId) => this.setState({dealerId})}
+            value={this.state.dealerId}
           />
         </View>
         <View style={styles.textInputs}>
           <Text style={styles.textLabel}>
-            Fisherman Address
+             Dealer Name
           </Text>
           <TextInput
             style={styles.textBox}
-            onChangeText={(fisherAddress) => this.setState({fisherAddress})}
-            value={this.state.fisherAddress}
+            onChangeText={(dealerName) => this.setState({dealerName})}
+            value={this.state.dealerName}
             />
         </View>
         <View style={styles.textInputs}>
           <Text style={styles.textLabel}>
-            Fisherman Phone Number
+            Dealer Address
           </Text>
           <TextInput
             style={styles.textBox}
-            onChangeText={(fisherPhone) => this.setState({fisherPhone})}
-            value={this.state.fisherPhone}
+            onChangeText={(dealerAddress) => this.setState({dealerAddress})}
+            value={this.state.dealerAddress}
           />
         </View>
           <View style={styles.textInputs}>
             <Text style={styles.textLabel}>
-              Fisherman Email
+              Trip Locations
             </Text>
           <TextInput
             style={styles.textBox}
-            onChangeText={(fisherEmail) => this.setState({fisherEmail})}
-            value={this.state.fisherEmail}
+            onChangeText={(tripLocations) => this.setState({tripLocations})}
+            value={this.state.tripLocations}
           />
         </View>
+          <View style={styles.textInputs}>
+            <Text style={styles.textLabel}>
+              Vessel Name
+            </Text>
+          <TextInput
+            style={styles.textBox}
+            onChangeText={(vesselName) => this.setState({vesselName})}
+            value={this.state.vesselName}
+          />
+        </View>
+          <View style={styles.textInputs}>
+            <Text style={styles.textLabel}>
+              Vessel Owner
+            </Text>
+          <TextInput
+            style={styles.textBox}
+            onChangeText={(vesselOwner) => this.setState({vesselOwner})}
+            value={this.state.vesselOwner}
+          />
+        </View>
+          <View style={styles.textInputs}>
+            <Text style={styles.textLabel}>
+              Vessel ID
+            </Text>
+          <TextInput
+            style={styles.textBox}
+            onChangeText={(vesselId) => this.setState({vesselId})}
+            value={this.state.vesselId}
+          />
+        </View>
+        </ScrollView>
       </View>
     );
   }
@@ -80,6 +117,9 @@ const styles = StyleSheet.create({
   textInputs: {
     flexDirection:'row',
     margin: 10
+  },
+  scrollView: {
+    height:300
   },
   textLabel: {
     fontSize:10,
