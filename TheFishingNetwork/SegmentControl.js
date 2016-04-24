@@ -27,18 +27,11 @@ export var SegmentControl = React.createClass({
     }
     return (
       <View style={styles.segment}>
-      <Text>Event</Text>
       <SegmentedControlIOS
         values={this.state.values}
         selectedIndex={this.state.selectedIndex}
         onChange={this._onChange}
         onValueChange={this._onValueChange}/>
-        <Text style={styles.text} >
-          Value: {this.state.value}
-        </Text>
-        <Text style = {styles.text} >
-          Index: {this.state.selectedIndex}
-        </Text>
         {databaseView}
       </View>
     );
@@ -70,6 +63,7 @@ const styles = StyleSheet.create({
     margin: 10,
   },
   segment: {
+    marginTop: 10,
     marginHorizontal: 10
   },
   welcome: {
