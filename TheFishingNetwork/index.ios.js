@@ -20,8 +20,25 @@ import SegmentControl from '../TheFishingNetwork/SegmentControl';
 
 class TheFishingNetwork extends Component {
 
-  buttonClicked(event) {
-    console.log('buttonClicked');
+  segment = <SegmentControl/>
+  export(event) {
+      // backend isn't deployed :(
+      fetch('https://mywebsite.com/endpoint/', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          // this.segment.databaseDictionary
+        })
+      }).then((response) => response.text())
+        .then((responseText) => {
+          console.log(responseText);
+        })
+        .catch((error) => {
+          console.warn(error);
+        });
   }
   render() {
     return (
@@ -29,12 +46,12 @@ class TheFishingNetwork extends Component {
         <View style={styles.toolbar}>
           <Text style={styles.toolbarButton}></Text>
           <Text style={styles.toolbarTitle}>The Fishing Network</Text>
-          <Button onPress={this.buttonClicked}>
+          <Button onPress={this.export}>
             <Text style={styles.toolbarButton}>Export</Text>
           </Button>
         </View>
         <View style = {{marginBottom: 10}}>
-          <SegmentControl />
+          {this.segment}
         </View>
       </View>
     );

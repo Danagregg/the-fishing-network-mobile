@@ -28,6 +28,7 @@ export var SegmentControl = React.createClass({
     } else if (this.state.selectedIndex == 2) {
       databaseView = <SpeciesView />
     }
+    databaseDictionary = databaseView.state
     return (
       <View style={styles.segment}>
       <SegmentedControlIOS
