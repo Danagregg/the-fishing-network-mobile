@@ -10,6 +10,7 @@ import React, {
   View
 } from 'react-native';
 
+
 // <TextInput
 //     style={{height: 40, borderColor: 'gray', borderWidth: 1}}
 //     onChangeText={(text) => this.setState({text})}
@@ -18,11 +19,14 @@ import React, {
 
 export var OperationView = React.createClass ({
 
+
   getInitialState(){
     return {
       dealerId:'987654',
       dealerName: 'Bobby Jones',
       dealerAddress:'90 Avison Way',
+      tripStart: new Date().toLocaleDateString(),
+      tripEnd: new Date().toLocaleDateString(),
       tripLocations: "Orlando, Vanocuver",
       vesselName: "Black Pearl",
       vesselOwner: "Jones Bobby",
@@ -30,6 +34,7 @@ export var OperationView = React.createClass ({
 
     };
   },
+
 
 // This is gross, but hackathon yolo
   render() {
@@ -65,6 +70,26 @@ export var OperationView = React.createClass ({
             style={styles.textBox}
             onChangeText={(dealerAddress) => this.setState({dealerAddress})}
             value={this.state.dealerAddress}
+          />
+        </View>
+        <View style={styles.textInputs}>
+          <Text style={styles.textLabel}>
+              Trip Start Date
+          </Text>
+          <TextInput
+            style={styles.textBox}
+            onChangeText={(tripStart) => this.setState({tripStart})}
+            value={this.state.tripStart}
+          />
+        </View>
+        <View style={styles.textInputs}>
+          <Text style={styles.textLabel}>
+              Trip End Date
+          </Text>
+          <TextInput
+            style={styles.textBox}
+            onChangeText={(tripEnd) => this.setState({tripEnd})}
+            value={this.state.tripEnd}
           />
         </View>
           <View style={styles.textInputs}>
@@ -119,7 +144,7 @@ const styles = StyleSheet.create({
     margin: 10
   },
   scrollView: {
-    height:300
+    flex:1
   },
   textLabel: {
     fontSize:10,
