@@ -7,6 +7,7 @@ import React, {
   View
 } from 'react-native';
 
+import CatchView from '../TheFishingNetwork/CatchView';
 import OperationView from '../TheFishingNetwork/OperationView';
 
 export var SegmentControl = React.createClass({
@@ -21,6 +22,8 @@ export var SegmentControl = React.createClass({
     databaseView = null
     if (this.state.selectedIndex == 0) {
       databaseView = <OperationView />
+    } else if (this.state.selectedIndex == 1) {
+      databaseView = <CatchView />
     }
     return (
       <View style={styles.segment}>
