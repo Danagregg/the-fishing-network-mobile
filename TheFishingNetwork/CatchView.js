@@ -10,19 +10,15 @@ import React, {
   View
 } from 'react-native';
 
+
 export var CatchView = React.createClass ({
 
   getInitialState(){
     return {
-      dealerId:'987654',
-      dealerName: 'Lulu Jones',
-      dealerAddress:'90 Avison Way',
-      tripStart: new Date().toLocaleDateString(),
-      tripEnd: new Date().toLocaleDateString(),
-      tripLocations: "Orlando, Vanocuver",
-      vesselName: "Black Pearl",
-      vesselOwner: "Jones Bobby",
-      vesselId: "123456",
+      species:'Tuna',
+      weight: '150',
+      count:'4',
+      pricelb: '$150/lb',
 
     };
   },
@@ -35,92 +31,42 @@ export var CatchView = React.createClass ({
           style={styles.scrollView}>
         <View style={styles.textInputs}>
           <Text style={styles.textLabel}>
-              Dealer ID
+              Species Caught
           </Text>
           <TextInput
             style={styles.textBox}
-            onChangeText={(dealerId) => this.setState({dealerId})}
-            value={this.state.dealerId}
+            onChangeText={(species) => this.setState({species})}
+            value={this.state.species}
           />
         </View>
         <View style={styles.textInputs}>
           <Text style={styles.textLabel}>
-             Dealer Name
+             Total Weight Caught
           </Text>
           <TextInput
             style={styles.textBox}
-            onChangeText={(dealerName) => this.setState({dealerName})}
-            value={this.state.dealerName}
+            onChangeText={(weight) => this.setState({weight})}
+            value={this.state.weight}
             />
         </View>
         <View style={styles.textInputs}>
           <Text style={styles.textLabel}>
-            Dealer Address
+            Total Fish Caught
           </Text>
           <TextInput
             style={styles.textBox}
-            onChangeText={(dealerAddress) => this.setState({dealerAddress})}
-            value={this.state.dealerAddress}
+            onChangeText={(count) => this.setState({count})}
+            value={this.state.count}
           />
         </View>
         <View style={styles.textInputs}>
           <Text style={styles.textLabel}>
-              Trip Start Date
+              Price per Lb
           </Text>
           <TextInput
             style={styles.textBox}
-            onChangeText={(tripStart) => this.setState({tripStart})}
-            value={this.state.tripStart}
-          />
-        </View>
-        <View style={styles.textInputs}>
-          <Text style={styles.textLabel}>
-              Trip End Date
-          </Text>
-          <TextInput
-            style={styles.textBox}
-            onChangeText={(tripEnd) => this.setState({tripEnd})}
-            value={this.state.tripEnd}
-          />
-        </View>
-          <View style={styles.textInputs}>
-            <Text style={styles.textLabel}>
-              Trip Locations
-            </Text>
-          <TextInput
-            style={styles.textBox}
-            onChangeText={(tripLocations) => this.setState({tripLocations})}
-            value={this.state.tripLocations}
-          />
-        </View>
-          <View style={styles.textInputs}>
-            <Text style={styles.textLabel}>
-              Vessel Name
-            </Text>
-          <TextInput
-            style={styles.textBox}
-            onChangeText={(vesselName) => this.setState({vesselName})}
-            value={this.state.vesselName}
-          />
-        </View>
-          <View style={styles.textInputs}>
-            <Text style={styles.textLabel}>
-              Vessel Owner
-            </Text>
-          <TextInput
-            style={styles.textBox}
-            onChangeText={(vesselOwner) => this.setState({vesselOwner})}
-            value={this.state.vesselOwner}
-          />
-        </View>
-          <View style={styles.textInputs}>
-            <Text style={styles.textLabel}>
-              Vessel ID
-            </Text>
-          <TextInput
-            style={styles.textBox}
-            onChangeText={(vesselId) => this.setState({vesselId})}
-            value={this.state.vesselId}
+            onChangeText={(pricelb) => this.setState({pricelb})}
+            value={this.state.pricelb}
           />
         </View>
         </ScrollView>

@@ -14,18 +14,24 @@ import React, {
 } from 'react-native';
 
 import PropTypes from 'react';
+var Button = require('react-native-button');
 
 import SegmentControl from '../TheFishingNetwork/SegmentControl';
 
 class TheFishingNetwork extends Component {
 
+  buttonClicked(event) {
+    console.log('buttonClicked');
+  }
   render() {
     return (
       <View>
         <View style={styles.toolbar}>
           <Text style={styles.toolbarButton}></Text>
           <Text style={styles.toolbarTitle}>The Fishing Network</Text>
-          <Text style={styles.toolbarButton}>Export</Text>
+          <Button onPress={this.buttonClicked}>
+            <Text style={styles.toolbarButton}>Export</Text>
+          </Button>
         </View>
         <View style = {{marginBottom: 10}}>
           <SegmentControl />

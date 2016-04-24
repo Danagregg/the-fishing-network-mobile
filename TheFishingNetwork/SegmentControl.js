@@ -9,6 +9,7 @@ import React, {
 
 import CatchView from '../TheFishingNetwork/CatchView';
 import OperationView from '../TheFishingNetwork/OperationView';
+import SpeciesView from '../TheFishingNetwork/SpeciesView';
 
 export var SegmentControl = React.createClass({
   getInitialState() {
@@ -24,6 +25,8 @@ export var SegmentControl = React.createClass({
       databaseView = <OperationView />
     } else if (this.state.selectedIndex == 1) {
       databaseView = <CatchView />
+    } else if (this.state.selectedIndex == 2) {
+      databaseView = <SpeciesView />
     }
     return (
       <View style={styles.segment}>
