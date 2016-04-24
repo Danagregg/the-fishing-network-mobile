@@ -9,6 +9,7 @@ import React, {
   SegmentedControlIOS,
   Component,
   StyleSheet,
+  Image,
   Text,
   View
 } from 'react-native';
@@ -44,6 +45,10 @@ class TheFishingNetwork extends Component {
     return (
       <View>
         <View style={styles.toolbar}>
+          <Image
+          style={styles.icon}
+          source={require('./fishingnetworklogo.png')}
+          />
           <Text style={styles.toolbarButton}></Text>
           <Text style={styles.toolbarTitle}>The Fishing Network</Text>
           <Button onPress={this.export}>
@@ -60,7 +65,7 @@ class TheFishingNetwork extends Component {
 
 const styles = StyleSheet.create({
   toolbar: {
-    backgroundColor:'#81c04d',
+    backgroundColor:'#03A9F4',
     paddingTop:30,
     paddingBottom:10,
     flexDirection:'row'
@@ -82,11 +87,18 @@ const styles = StyleSheet.create({
     margin: 10,
   },
   toolbarTitle:{
+    marginLeft: -20,
     color:'#fff',
     textAlign:'center',
     fontSize:20,
     fontWeight:'bold',
     flex:1
+  },
+  icon:{
+    marginLeft: 10,
+    flex:0.1,
+    height: 35,
+    width: 35
   },
   instructions: {
     textAlign: 'center',
