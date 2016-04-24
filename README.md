@@ -4,7 +4,7 @@ This react native mobile app can build easily on both iOS and Android. The app a
 
 ### Setup 
 Since this is built with React-native, it requires Mac OSX.
-First, install <a rel="license" href="http://brew.sh/">Homebrew</a>. Install <a rel="license" href="https://nodejs.org/en/">Node.js</a> 4.0 or newer using <a rel="license" href="https://github.com/creationix/nvm#installation">nvm</a> then run ``` nvm install node && nvm alias default node ```. With Homebrew, install Watchman and Flow. After cloning this repository, run <a rel="license" href="https://docs.npmjs.com/">npm</a> install.
+First, install <a rel="license" href="http://brew.sh/">Homebrew</a>. Install <a rel="license" href="https://nodejs.org/en/">Node.js</a> 4.0 or newer using <a rel="license" href="https://github.com/creationix/nvm#installation">nvm</a> then run ``` nvm install node && nvm alias default node ``` while in the repository. With Homebrew, install Watchman and Flow. After cloning this repository, run <a rel="license" href="https://docs.npmjs.com/">npm</a> install.
 
 ### Next Steps
 The Fishing Network mobile wants to support all the data that is offered on the web. Also, to reduce confusion, we want to customize some input fields to better suit the input data like having a date picker for date inputs. The Fishing Network also is looking to allow users to quickly query data on the mobile app and visualize the data on the go.
